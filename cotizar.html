@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitar cotización · El Hogar de Pony</title>
+<meta name="description" content="Solicita una cotización personalizada para familias u organizaciones.">
+<meta name="theme-color" content="#E94B9B">
+<link rel="icon" href="assets/img/favicon.svg?v=20261124" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css?v=20261124">
+<script defer src="assets/js/config.js?v=20261124"></script>
+<script defer src="assets/js/main.js?v=20261124"></script>
+</head>
+<body data-page="cotizar">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="El Hogar de Pony, ir al inicio">
+      <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+  <path d="M6 22 24 7l18 15v19a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z" fill="#E94B9B"/>
+  <path d="M24 38s-9-5.6-9-11.6A4.9 4.9 0 0 1 24 23.6a4.9 4.9 0 0 1 9 2.8C33 32.4 24 38 24 38z" fill="#FFF9F2"/>
+  <circle cx="24" cy="17.5" r="3.2" fill="#FFF9F2"/>
+</svg>
+      <span class="brand-text"><strong>El Hogar de Pony</strong><small>Cuidado infantil · Talento humano</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr-only">Abrir menú</span>
+    </button>
+    <nav class="main-nav" aria-label="Menú principal">
+      <ul id="menu-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="cuidado-infantil.html">Cuidado infantil</a></li>
+        <li><a href="reclutamiento.html">Reclutamiento</a></li>
+        <li><a href="clima-laboral.html" class="nav-consult">Clima laboral</a></li>
+        <li><a href="cultura-organizacional.html" class="nav-consult">Cultura organizacional</a></li>
+        <li><a href="capacitacion.html" class="nav-consult">Capacitación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li class="nav-cta-item"><a class="btn btn-primary btn-sm" href="cotizar.html">Cotizar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenido" tabindex="-1">
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Inicio</a> / Solicitar cotización</p>
+    <span class="eyebrow">Cotización personalizada</span>
+    <h1>Cuéntanos qué necesitas</h1>
+    <p class="lead">Completa el formulario y elige cómo enviarlo: por WhatsApp o por correo. Tú confirmas el envío en la aplicación que se abra.</p>
+  </div>
+</section>
+
+<section class="section-tight" style="padding-top:0">
+  <div class="narrow">
+    <form class="form-card" data-hp-form="cotizar" novalidate>
+      <div class="segmented" role="group" aria-label="Tipo de solicitante">
+        <button type="button" data-audience="familia" aria-pressed="true">Soy una familia</button>
+        <button type="button" data-audience="org" aria-pressed="false">Soy una organización</button>
+      </div>
+
+      <div class="hp-field" aria-hidden="true"><label>No llenar <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <div data-audience-group="familia" class="form-grid">
+        <div class="field full"><label for="f-nombre">Nombre completo <span class="req">*</span></label><input type="text" id="f-nombre" name="nombre" data-label="Nombre" required maxlength="80" minlength="3" autocomplete="name"></div>
+        <div class="field"><label for="f-tel">Teléfono <span class="req">*</span></label><input type="tel" id="f-tel" name="telefono" data-label="Teléfono" required maxlength="16" autocomplete="tel" placeholder="+51 9xx xxx xxx"></div>
+        <div class="field"><label for="f-mail">Correo <span class="hint" style="display:inline">(opcional)</span></label><input type="email" id="f-mail" name="correo" data-label="Correo" maxlength="80" autocomplete="email"></div>
+        <div class="field"><label for="f-zona">Distrito o zona de Cusco <span class="req">*</span></label><input type="text" id="f-zona" name="zona" data-label="Distrito o zona" required maxlength="60" placeholder="Ej.: Wanchaq, Santiago, San Sebastián"></div>
+        <div class="field"><label for="f-serv">Servicio <span class="req">*</span></label>
+          <select id="f-serv" name="servicio" data-label="Servicio" data-servicio required>
+            <option value="">Selecciona…</option>
+            <option value="cuidado-infantil">Cuidado infantil</option>
+            <option value="cuidado-especializado">Cuidado infantil especializado</option>
+            <option value="seleccion">Selección a medida de personal de cuidado</option>
+            <option value="evaluacion-psicologica">Evaluación psicológica de un cuidador/a</option>
+            <option value="seguimiento">Seguimiento de un servicio</option>
+          </select></div>
+        <div class="field"><label for="f-mod">Modalidad deseada</label>
+          <select id="f-mod" name="modalidad" data-label="Modalidad">
+            <option value="">Selecciona…</option><option>Por horas</option><option>Por días</option><option>A coordinar</option>
+          </select></div>
+        <div class="field"><label for="f-fecha">Fecha aproximada de inicio</label><input type="date" id="f-fecha" name="fecha" data-label="Fecha aproximada"></div>
+        <div class="field"><label for="f-edad">Edad aproximada del niño</label>
+          <select id="f-edad" name="edad" data-label="Edad del niño">
+            <option value="">Prefiero no indicar</option><option>0 a 2 años</option><option>3 a 5 años</option><option>6 a 9 años</option><option>10 años o más</option>
+          </select></div>
+        <div class="field full"><label for="f-req">Requerimientos generales</label><textarea id="f-req" name="requerimientos" data-label="Requerimientos" maxlength="600" placeholder="Horarios, rutinas, tareas de cuidado…"></textarea><span class="hint">No incluyas diagnósticos ni datos médicos del menor. Los coordinaremos de forma privada si son necesarios.</span></div>
+      </div>
+
+      <div data-audience-group="org" class="form-grid" hidden>
+        <div class="field"><label for="o-nombre">Nombre de contacto <span class="req">*</span></label><input type="text" id="o-nombre" name="nombre" data-label="Nombre de contacto" required maxlength="80" minlength="3" autocomplete="name"></div>
+        <div class="field"><label for="o-cargo">Cargo <span class="hint" style="display:inline">(opcional)</span></label><input type="text" id="o-cargo" name="cargo" data-label="Cargo" maxlength="60"></div>
+        <div class="field"><label for="o-org">Organización <span class="hint" style="display:inline">(opcional)</span></label><input type="text" id="o-org" name="organizacion" data-label="Organización" maxlength="80"></div>
+        <div class="field"><label for="o-sector">Sector <span class="req">*</span></label><input type="text" id="o-sector" name="sector" data-label="Sector" required maxlength="60" placeholder="Ej.: educación, salud, comercio"></div>
+        <div class="field"><label for="o-n">Número aproximado de trabajadores <span class="req">*</span></label><input type="number" id="o-n" name="trabajadores" data-label="N.° de trabajadores" required min="1" max="100000"></div>
+        <div class="field"><label for="o-serv">Servicio <span class="req">*</span></label>
+          <select id="o-serv" name="servicio" data-label="Servicio" data-servicio required>
+            <option value="">Selecciona…</option>
+            <option value="reclutamiento">Reclutamiento y selección</option>
+            <option value="evaluacion-psicologica">Evaluación psicológica</option>
+            <option value="clima">Diagnóstico de clima laboral</option>
+            <option value="cultura">Diagnóstico de cultura organizacional</option>
+            <option value="capacitacion">Programa de capacitación</option>
+            <option value="consultoria">Consultoría organizacional (varios servicios)</option>
+          </select></div>
+        <div class="field"><label for="o-tel">Teléfono <span class="req">*</span></label><input type="tel" id="o-tel" name="telefono" data-label="Teléfono" required maxlength="16" autocomplete="tel"></div>
+        <div class="field"><label for="o-mail">Correo <span class="req">*</span></label><input type="email" id="o-mail" name="correo" data-label="Correo" required maxlength="80" autocomplete="email"></div>
+        <div class="field full"><label for="o-desc">Descripción de la necesidad</label><textarea id="o-desc" name="descripcion" data-label="Necesidad" maxlength="600"></textarea></div>
+      </div>
+
+      <div class="field full" style="margin-top:20px">
+        <label class="consent"><input type="checkbox" name="consentimiento" required> <span>Acepto que El Hogar de Pony use estos datos solo para responder mi solicitud, según la <a href="privacidad.html" target="_blank">política de privacidad</a>. <span class="req">*</span></span></label>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-wa" type="button" data-send="wa">Enviar por WhatsApp</button>
+        <button class="btn btn-primary" type="button" data-send="mail">Enviar por correo</button>
+        <button class="btn btn-outline" type="button" data-send="copy">Copiar datos de la solicitud</button>
+      </div>
+      <div class="form-status" role="status" aria-live="polite"></div>
+      <p class="note" style="margin-bottom:0">Los servicios se coordinan según necesidades y disponibilidad en la ciudad de Cusco. Solicitar una cotización no implica una contratación confirmada.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand brand-footer" href="index.html"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+  <path d="M6 22 24 7l18 15v19a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z" fill="#E94B9B"/>
+  <path d="M24 38s-9-5.6-9-11.6A4.9 4.9 0 0 1 24 23.6a4.9 4.9 0 0 1 9 2.8C33 32.4 24 38 24 38z" fill="#FFF9F2"/>
+  <circle cx="24" cy="17.5" r="3.2" fill="#FFF9F2"/>
+</svg><span class="brand-text"><strong>El Hogar de Pony</strong><small>Cuidado, unión, calidez y atención especializada</small></span></a>
+      <p class="footer-note">Cuidado infantil especializado y consultoría de talento humano en la ciudad de Cusco, Perú. Atención previa coordinación, según disponibilidad.</p>
+    </div>
+    <div>
+      <h2 class="footer-title">Servicios</h2>
+      <ul class="footer-links">
+        <li><a href="cuidado-infantil.html">Cuidado infantil</a></li>
+        <li><a href="reclutamiento.html">Reclutamiento y selección</a></li>
+        <li><a href="evaluacion-psicologica.html">Evaluación psicológica</a></li>
+        <li><a href="cv-optimo.html">CV óptimo</a></li>
+        <li><a href="clima-laboral.html">Clima laboral</a></li>
+        <li><a href="cultura-organizacional.html">Cultura organizacional</a></li>
+        <li><a href="capacitacion.html">Programas de capacitación</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Empresa</h2>
+      <ul class="footer-links">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="nosotros.html#equipo">Equipo</a></li>
+        <li><a href="nosotros.html#organigrama">Organigrama</a></li>
+        <li><a href="trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+        <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        <li><a href="cotizar.html">Solicitar cotización</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Contacto</h2>
+      <ul class="footer-links">
+        <li><a data-wa="Hola, quisiera información sobre los servicios de El Hogar de Pony." href="https://wa.me/51936697851" target="_blank" rel="noopener">WhatsApp +51 936 697 851</a></li>
+        <li><a href="tel:+51936697851">Llamar +51 936 697 851</a></li>
+        <li><a href="mailto:71752697@continental.edu.pe">71752697@continental.edu.pe</a></li>
+        <li>Ciudad de Cusco, Perú</li>
+      </ul>
+      <div class="social-links" data-social hidden></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span data-year>2026</span> El Hogar de Pony. Proyecto académico de Psicología Organizacional · Universidad Continental.</p>
+    <p><a href="privacidad.html">Política de privacidad</a> · <a href="terminos.html">Términos y condiciones</a> · <a href="#top" data-backtop>Volver arriba ↑</a></p>
+  </div>
+</footer>
+<a class="wa-float" data-wa="Hola, quisiera información sobre los servicios de El Hogar de Pony." href="https://wa.me/51936697851" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp a El Hogar de Pony">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.5z"/></svg>
+  <span>WhatsApp</span>
+</a>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+</body>
+</html>
